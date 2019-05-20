@@ -24,17 +24,33 @@ const cards = [
 const cardsInPlay = [];
 cardsInPlay.push(cards.rank);
 function checkForMatch(){
+	this.setAttribute(cards[cardId].cardImage);
 	if (cardsInPlay[0] === cardsInPlay[1]) {
 	console.log("You found a match!");
 } else {
 	console.log("Sorry, try again.");
 }
 };
-function flipCard(cardId){
+function flipCard(){
+	this.getAttribute(data-id);
 	console.log("User flipped " + cards[cardId].rank);
 	console.log (cards[cardId].cardImage);
 	console.log (cards[cardId].suit);
 	checkForMatch();
 };
-flipCard(0);
-flipCard(2);
+
+function createBoard(){
+	for (var i=0; i < 4; i++){
+document.getElementsByTagName('cardElement')[0].setAttribute('src', 'images/back.png');
+document.cardElement.setAttribute(i);
+
+const queenOfHearts=document.createElement('img');
+const queenOfDiamonds=document.createElement('img');
+const kingOfHearts=document.createElement('img');
+const KingOfDiamonds=document.createElement('img');
+cardElement.addEventListener('click', flipCard);
+document.querySelector('cardElement').appendChild('game-board');
+}
+};
+
+createBoard();
